@@ -1,7 +1,8 @@
 $bodyBgColor : red;
 $AppFont : Arial, Helvetica, sans-serif;
 
-body {
+.root {
     background-color: $bodyBgColor;
     font-family: $AppFont;
+    color: blue;
 }
