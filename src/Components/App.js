@@ -1,4 +1,5 @@
-import { Component } from "react";
+import React, { Component } from "react";
+
 export default class App extends Component {
   constructor() {
     super();
@@ -11,7 +12,7 @@ export default class App extends Component {
 
   logState() {
       console.log(this.state);
-      let num = this.state.num++;
+      let num = ++this.state.num;
       this.setState({
           ...this.state,
           num
@@ -20,8 +21,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className = "App" onClick = {this.logState()}>Hello world!
-        <div className = "Text">${this.state.num}</div>
+      <div className = "App" onClick = {this.logState}>Hello world!
+        <div className = "Text">{this.state.num}</div>
       </div>
     );
   }
