@@ -2,10 +2,10 @@
 
 $headerHeight:100px;
 
-.header {
+header {
     height: $headerHeight;
     @include flex(row, center, center);
-    @include marginAndPadding(10px, 10px);
+    @include marginAndPadding(0, 10px);
 }
 
 .fetchBtn {

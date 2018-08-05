@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
 export default class Body extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      num : 0
+      num : this.props.store.getItem('num') ? this.props.store.getItem('num') : 0
     };
 
     this.logState = this.logState.bind(this);
@@ -13,6 +13,7 @@ export default class Body extends Component {
   logState() {
       console.log(this.state);
       let num = ++this.state.num;
+      this.props.store.setItem('num' , num);
       this.setState({
           ...this.state,
           num
