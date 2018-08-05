@@ -1,5 +1,12 @@
+@import 'Mixins.scss';
+
 $bodyBgColor : red;
 $AppFont : Arial, Helvetica, sans-serif;
+$AppFontSize : 10px;
+
+html {
+    font-size: $AppFontSize;
+}
 
 .root {
     background-color: $bodyBgColor;

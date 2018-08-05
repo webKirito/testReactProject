@@ -1,0 +1,23 @@
+@import 'Mixins.scss';
+
+$headerHeight:100px;
+
+.header {
+    height: $headerHeight;
+    @include flex(row, center, center);
+    @include marginAndPadding(10px, 10px);
+}
+
+.fetchBtn {
+    font-size: 2rem;
+    @include marginAndPadding(5px, 5px);
+    @include borderRadius(5px);
+}
+
+.day {
+    background-color: grey;
+}
+
+.night {
+    background-color: black;
+}

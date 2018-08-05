@@ -1,2 +1,8 @@
 @import 'reset.css';
 @import '../Components/Body.scss';
+@import '../Components/Header.scss';
+
+.root {
+    display: flex;
+    flex-direction: column;    
+}

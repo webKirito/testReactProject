@@ -1,29 +1,20 @@
 import React, { Component } from "react";
+import Header from "./Header";
+import Body from './Body';
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      num : 0
-    };
-
-    this.logState = this.logState.bind(this);
+  constructor(props) {
+    super(props);
   }
 
-  logState() {
-      console.log(this.state);
-      let num = ++this.state.num;
-      this.setState({
-          ...this.state,
-          num
-      })
-  }
 
   render() {
     return (
-      <div className = "App" onClick = {this.logState}>Hello world!
-        <div className = "Text">{this.state.num}</div>
-      </div>
+      [
+        <Header key = "header"/>,
+        <Body key = "body"/>
+      ]
     );
   }
 }
+  
